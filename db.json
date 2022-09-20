@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": 1,
+      "password": "json-server"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
