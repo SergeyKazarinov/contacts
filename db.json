@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "name": 1,
-      "password": "json-server"
+      "name": "admin",
+      "password": "admin"
     }
   ],
   "comments": [

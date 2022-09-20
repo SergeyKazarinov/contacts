@@ -1,0 +1,60 @@
+.form {
+  &__set {
+    margin: 0;
+    padding: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    border: 0;
+    position: relative;
+  }
+  &:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+    max-height: 14px;
+    padding: 0;
+    padding-bottom: 11.35px;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:nth-child(2) {
+      margin-top: 30px;
+    }
+
+    &_type {
+      &_registration {
+        background-color: #000;
+        color: #fff;
+        border-bottom: 2px solid rgb(204, 204, 204);
+      }
+  
+      &_error {
+        border-bottom: 1px solid #f00 !important;
+      }
+    }
+  }
+
+  &__inputError {
+    color: #f00;
+    font-size: 12px;
+    line-height: 12px;
+    position: absolute;
+    top: 35.35px;
+    left: 0;
+    opacity: 0;
+
+    &_active {
+      opacity: 1;
+    }
+  }
+}
+
+
