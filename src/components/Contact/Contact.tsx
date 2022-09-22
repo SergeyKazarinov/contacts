@@ -1,11 +1,16 @@
 import React from "react";
 import style from "./Contact.module.scss";
 
-const Contact = () => {
+interface ContactType {
+  name: string,
+  phone: string
+}
+
+const Contact = ({name, phone}: ContactType) => {
   return (
     <div className={style.container}>
-      <p className={style.name}>Казаринов Сергей Сергеевич</p>
-      <p className={style.phone}>89058625530</p>
+      <p className={style.name}>{name}</p>
+      <p className={style.phone}>{phone}</p>
       <div className={style.button}>
         <button type="button" className={style.button__edit}>edit</button>
         <button type="button" className={style.button__delete}>delete</button>
