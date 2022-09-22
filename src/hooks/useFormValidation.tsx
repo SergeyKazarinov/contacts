@@ -8,7 +8,7 @@ const useFormValidation = (theFirstInput: InputElement, theSecondInput: InputEle
   const [isButtonValid, setIsButtonValid] = useState(false);
 
   const handleTheFirstInputChange = useCallback(() => {
-    if(theFirstInput.current?.validity.valid) {
+    if(theFirstInput.current!.validity.valid) {
       setIsTheFirstValid(true);
     }
     else {
@@ -17,7 +17,7 @@ const useFormValidation = (theFirstInput: InputElement, theSecondInput: InputEle
   }, [])
 
   const handleTheSecondInputChange = useCallback(() => {
-    if(theSecondInput.current?.validity.valid) {
+    if(theSecondInput.current!.validity.valid) {
       setIsTheSecondValid(true);
     }
     else {

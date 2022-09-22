@@ -1,6 +1,7 @@
 import React from 'react';
 import Authorization from '../Authorization/Authorization';
 import { AuthorizationType } from '../../types/types';
+import app from './app.module.css';
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     
   }
   return (
-    <div>
+    <div className={app.page}>
       <Authorization onSubmit={handleAuthorization}/>
     </div>
   );
