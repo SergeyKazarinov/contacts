@@ -1,0 +1,38 @@
+@mixin paragraph {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin button {
+  background-color: #00000000;
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: rgb(201, 201, 201);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  transition: .5s;
+  &:hover {
+    opacity: .7;
+    transition: .5s;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__edit {
+    @include button;
+  }
+
+  &__delete {
+    @include button;
+  }
+}

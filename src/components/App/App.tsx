@@ -7,15 +7,15 @@ import ProtectedRoute from '../ProtectedRoute';
 import Main from '../Main/Main';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   const handleAuthorization = ({username, password}:AuthorizationType): void => {
     
   }
   return (
     <div className={app.page}>
-      <ProtectedRoute path="/" loggedIn={loggedIn} component={Main} />
       <Switch>
+        <ProtectedRoute exact path="/" loggedIn={loggedIn} component={Main} />
         <Route path="/login">
           <Authorization onSubmit={handleAuthorization} loggedIn={loggedIn}/>
         </Route>
