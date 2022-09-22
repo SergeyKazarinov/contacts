@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useState } from "react";
-import style from "./Fieldset.module.css";
+import style from "./Fieldset.module.scss";
 import {Fieldset} from "../../types/types";
 
 const FieldSet = ({inputType, placeholder, id, minLength, maxLength, onChange, inputRef}:Fieldset) => {

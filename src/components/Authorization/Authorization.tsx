@@ -1,17 +1,16 @@
 import React, { useRef, memo, useCallback } from "react";
-import style from "./Authorization.module.css";
+import style from "./Authorization.module.scss";
 import useFormValidation from "../../hooks/useFormValidation";
 import FieldSet from "../Fieldset/Fieldset";
 
 
-const Authorization:React.FC<{onSubmit: any}> = ({ onSubmit }) => {
+const Authorization:React.FC<{onSubmit: any, loggedIn: boolean}> = ({ onSubmit, loggedIn }) => {
   const userName = useRef<HTMLInputElement>();
   const userPassword = useRef<HTMLInputElement>();
   const {isButtonValid, handleTheFirstInputChange, handleTheSecondInputChange} = useFormValidation(userName, userPassword);
 
   const handleSubmit = useCallback((e:React.FormEvent<HTMLFormElement>):void => {
     e.preventDefault();
-
     onSubmit({
       username: userName.current!.value,
       password: userPassword.current!.value
