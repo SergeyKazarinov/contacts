@@ -1,26 +1,6 @@
 import {createReducer, createAction} from "@reduxjs/toolkit";
-
-interface Contact {
-  name: string,
-  phone: string
-}
-
-interface Contacts {
-  contacts: Array<Contact>
-}
-
-const initialState: Contacts = {
-  contacts: [
-    {
-      name: 'Казаринов Сергей Сергеевич',
-      phone: '89068625530',
-    },
-    {
-      name: 'Казаринов Антон Сергеевич',
-      phone: '89223666001'
-    }
-  ]
-}
+import { Contacts } from "../../types/types";
+import { initialState } from "../store";
 
 const ADD_PROFILE = createAction('ADD_PROFILE')
 

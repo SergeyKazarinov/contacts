@@ -13,7 +13,6 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-redux": "^7.1.24",
     "@types/react-router": "^5.1.19",
-    "json-server": "^0.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -24,8 +23,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm start\"",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "server": "json-server db.json -p 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +48,8 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
-    "@types/tapable": "^2.2.2"
+    "@types/tapable": "^2.2.2",
+    "concurrently": "^7.4.0",
+    "json-server": "^0.17.0"
   }
 }

@@ -2,7 +2,8 @@
   "users": [
     {
       "name": "admin",
-      "password": "admin"
+      "password": "123456",
+      "id": 1
     }
   ],
   "comments": [
@@ -12,7 +13,14 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "contacts": [
+    {
+      "name": "Казаринов Сергей Сергеевич",
+      "phone": "89068625530"
+    },
+    {
+      "name": "Казаринов Антон Сергеевич",
+      "phone": "89223666001"
+    }
+  ]
 }
